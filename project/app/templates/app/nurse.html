@@ -1,0 +1,16 @@
+{% extends "app/home.html" %}
+
+{% load static %}
+
+<title>{% block title %}Nurse - Graceview Hospital{% endblock %}</title>
+
+{% block content %}
+<br><br>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ synup1.as_p }} 
+    <button type="submit" class="btn">Submit</button> &nbsp; &nbsp;
+    <a href="{% url 'login' %}" class="btn">Login</a>
+</form>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "app/home.html" %}
+
+{% load static %}
+
+<title>{% block title %}Faculty{% endblock %}</title>
+
+{% block content %}
+<br><br>
+<div class = "centered-text">
+<h1>Meet Our Faculty!</h1> <br><br></div>
+
+<div class="container"> <!-- cards -->
+  <div class="row justify-content-center">
+    <div class="col-md-4 mb-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/cardi.jpeg' %}" class="card-img-top" alt="Cardiologist">
+        <div class="card-body">
+            <h5 class="card-title">Dr. Emily Smith</h5>
+            <p class="card-text">Cardiologist, specializing in heart disease & related conditions.</p>
+            <a href="#" class="btn btn-outline-primary">Know More!</a>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/brain.jpg' %}" class="card-img-top" alt="Neurologist">
+        <div class="card-body">
+            <h5 class="card-title">Dr. Michael Johnson</h5>
+            <p class="card-text">Neurologist, expertise in neuro disorders & brain health.</p>
+            <a href="#" class="btn btn-outline-primary">Know More!</a>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/baby2.jpg' %}" class="card-img-top" alt="Pediatrician">
+        <div class="card-body">
+            <h5 class="card-title">Dr. Olivia Brown</h5>
+            <p class="card-text">Pediatrician, focusing on children's health & development.</p>
+            <a href="#" class="btn btn-outline-primary">Know More!</a>
+        </div>
+        </div>
+    </div>
+  </div>
+          <br><br>
+  <div class="row justify-content-center">
+    <div class="col-md-4 mb-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/ortho.jpg' %}" class="card-img-top" alt="Orthopedic">
+        <div class="card-body">
+            <h5 class="card-title">Dr. William Jones</h5>
+            <p class="card-text">Orthopedic Surgeon, specializing in musculoskeletal issues.</p>
+            <a href="#" class="btn btn-outline-primary">Know More!</a>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/gen.jpg' %}" class="card-img-top" alt="General Practitioner">
+        <div class="card-body">
+            <h5 class="card-title">Dr. Sophia Miller</h5>
+            <p class="card-text">General Practitioner, providing comprehensive healthcare for all.</p>
+            <a href="#" class="btn btn-outline-primary">Know More!</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/onco.jpg' %}" class="card-img-top" alt="Oncologist">
+        <div class="card-body">
+            <h5 class="card-title">Dr. James Davis</h5>
+            <p class="card-text">Oncologist, specializing in the diagnosis and treatment of cancer.</p>
+            <a href="#" class="btn btn-outline-primary">Know More!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+
+{% endblock %}

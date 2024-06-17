@@ -1,0 +1,22 @@
+{% extends "app/home.html" %}
+
+{% load static %}
+
+<title>{% block title %}Doctor - Graceview Hospital{% endblock %}</title>
+
+{% block content %}
+<div class = "container">
+<div class = "spacer">
+<h2>Doctor's Login Form</h2><br><br>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ doclogins.as_p }} <br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+<button type="submit" class="btn btn-outline-primary">Login</button>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+    <a href="{% url 'docsign' %}" class="btn btn-outline-primary">Signup (for Doctors)</a>
+</form>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,78 @@
+.background {
+    height: auto;
+    width: auto;
+    background-color: burlywood;
+}
+
+.centered-text {
+    text-align: center;
+    font-family: Segoe UI Black;
+}
+
+.btn {
+    margin: auto;
+    padding: 5px;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.left, .right {
+    width: 48%; /* Set the width of each note */
+    margin-bottom: 20px; /* Add space between the notes */
+}
+
+.container {
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Distribute items evenly */
+    text-align: center;
+}
+
+.ccard {
+    background-color: coral;
+    border-radius: 10px;
+
+}
+
+.bg {
+    /* Adjust the path accordingly */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.footer-container {
+    background-color: #FFFDD0; /* Replace with your desired color */
+    color: #000080; /* Text color */
+    padding: 20px; /* Padding around the content */
+    text-align: center; /* Center the text */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Position at the bottom */
+    width: 100%; /* Full width */
+
+}
+
+.background-image {
+    background-size: flex; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    padding: 20px; /* Padding around the content */
+    text-align: center; /* Center the text */
+    color: white; /* Text color */
+    height: 25%;
+    width: 25%;
+}
+
+.img-thumbnail {
+    height: 5%;
+    width: 5%;
+
+}
+
+.spacer {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    text-align: center;
+        }
