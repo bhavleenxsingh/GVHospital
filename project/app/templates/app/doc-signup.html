@@ -11,7 +11,7 @@
 <h2>Doctor's Signup Form</h2><br><br>
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ docinstance.as_p }} <br>
+    {{ docinstance.as_p }} <br><br>
 &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
     <button type="submit" class="btn btn-outline-primary">Signup</button> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
     <a href="{% url 'doclog' %}" class="btn btn-outline-primary">Login</a>
