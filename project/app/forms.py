@@ -8,11 +8,11 @@ widgets = {
 
 class docregf(forms.ModelForm):
     Password = forms.CharField(widget=forms.PasswordInput(), label = 'Password')
-    Confirm_Password = forms.CharField(widget=forms.PasswordInput(), label = 'Confirm Password')
+    ConfirmPassword = forms.CharField(widget=forms.PasswordInput(), label = 'ConfirmPassword')
     
     class Meta:
         model = docreg
-        fields = ['Username', 'Password', 'Confirm_Password']
+        fields = ['Username', 'Password', 'ConfirmPassword']
         
 class docloginf(forms.ModelForm):
     Password = forms.CharField(widget=forms.PasswordInput(), label= "Password")
@@ -40,7 +40,7 @@ class patientf(forms.ModelForm):
     
     class Meta:
         model = patientinfo
-        fields = ["FirstName", "LastName", "Mobile"]
+        fields = ["FirstName", "LastName", "Gender", "Mobile", "Department"]
         
 class feedbackf(forms.ModelForm):
     

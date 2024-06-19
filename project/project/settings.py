@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':"hospital",
+        'NAME':"practice",
         "USER": "root",
         "PASSWORD": "admin",
         "HOST": "localhost",

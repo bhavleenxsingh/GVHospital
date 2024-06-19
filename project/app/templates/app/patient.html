@@ -1,0 +1,35 @@
+{% extends "app/home.html" %}
+
+{% load static %}
+
+<title>{% block title %}Patient Detail{% endblock %}</title>
+
+{% block content %}
+<div class = "container">
+<div class = "spacer">
+<br><a href="{% url 'addpatient' %}" class="btn btn-outline-primary">Add New Patient Info.</a><br><br>
+<h3>Patients' Information</h3><br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Mobile</th>
+        <th>Department</th>
+        <th>Gender</th>
+    </tr>
+{% for i in patientdetail %}
+    <tr>
+        <td>{{ i.id }}</td>
+        <td>{{ i.FirstName }}</td>
+        <td>{{ i.LastName }}</td>
+        <td>{{ i.Mobile }}</td>
+        <td>{{ i.Department }}</td>
+        <td>{{ i.Gender }}</td>
+    </tr>
+{% endfor %}
+</table>
+<a href="{% url 'addpatient' %}" class="btn btn-outline-primary">Add New Patient</a>
+</div>
+</div>
+{% endblock %}

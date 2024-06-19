@@ -1,0 +1,34 @@
+{% extends "app/home.html" %}
+
+{% load static %}
+
+<title>{% block title %}Feedback Detail{% endblock %}</title>
+    
+{% block content %}
+<div class = "container">
+<div class = "spacer">
+<h3>Feedbacks.</h3><br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>E-mail</th>
+        <th>Message</th>
+        <th>Date & Time</th>
+    </tr>
+{% for i in feedget %}
+    <tr>
+        <td>{{ i.id }}</td>
+        <td>{{ i.Name }}</td>
+        <td>{{ i.Mobile }}</td>
+        <td>{{ i.Email }}</td>
+        <td>{{ i.Message }}</td>
+        <td>{{ i.Time }}</td>
+    </tr>
+{% endfor %}
+</table>
+<a href="{% url 'feedb' %}" class="btn btn-outline-primary">Add New Feedback</a><br>
+</div>
+</div>
+{% endblock %}
