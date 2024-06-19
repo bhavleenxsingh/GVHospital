@@ -5,12 +5,15 @@
 <title>{% block title %}Feedback - Graceview Hospital{% endblock %}</title>
 
 {% block content %}
-<br><br>
+<div class = "container">
+<div class = "spacer">
+<h3>Feedback Form.</h3><br>
 <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-          {{ synup1.as_p }} 
-            <button type="submit" class="btn">Submit</button> &nbsp; &nbsp;
-            <a href="{% url 'login' %}" class="btn">Login</a>
-            </form>
-
+          {{ feed.as_p }} 
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+            </form><br>
+<a href="{% url 'viewfeedback' %}" class="btn btn-outline-primary">See All Feedbacks!</a>
+</div>
+</div>
 {% endblock %}

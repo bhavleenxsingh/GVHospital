@@ -7,7 +7,13 @@
 {% block content %}
 <div class = "container">
 <div class = "spacer">
-<h2>Form Submitted Successfully!</h2>
+<h2>Add New Patient : </h2><br>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ newpatient.as_p }} <br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+    <button type="submit" class="btn btn-outline-primary">Add</button>
+</form>
 <a href="{% url 'addpatient' %}" class="btn btn-outline-primary">Add New Patient</a>
 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
 <a href="{% url 'docsign' %}" class="btn btn-outline-primary">Add New Doctor</a>

@@ -2,15 +2,15 @@
 
 {% load static %}
 
-<title>{% block title %}Success{% endblock %}</title>
+<title>{% block title %}Logged Out{% endblock %}</title>
 
 {% block content %}
 <div class = "container">
 <div class = "spacer">
-<h2>Form Submitted Successfully!</h2>
-<a href="{% url 'addpatient' %}" class="btn btn-outline-primary">Add New Patient</a>
+<h2>Logout Successful!</h2> <br>
+<a href="{% url 'doclog' %}" class="btn btn-outline-primary">Login</a>
 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-<a href="{% url 'docsign' %}" class="btn btn-outline-primary">Add New Doctor</a>
+<a href="{% url 'docsign' %}" class="btn btn-outline-primary">Add New Faculty</a>
 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
 <a href="{% url 'feedb' %}" class="btn btn-outline-primary">Feedback!</a>
 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
