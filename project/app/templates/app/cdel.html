@@ -21,14 +21,14 @@
         <th>Gender</th>
     </tr>
     <tr>
-        <td>{{ delc.FirstName }}</td>
+        <td>{{ patdelc.id }}</td>
         <td>{{ delc.FirstName }}</td>
         <td>{{ delc.LastName }}</td>
         <td>{{ delc.Mobile }}</td>
         <td>{{ delc.Department }}</td>
         <td>{{ delc.Gender }}</td>
-        <td>{% if delc.id %}
-                <a href="{% url 'delpat' delc.id %}">Delete</a>
+        <td>{% if patdelc.id %}
+                <a href="{% url 'delpat' patdelc.id %}">Delete</a>
             {% else %}
                 No ID
             {% endif %}</td>
