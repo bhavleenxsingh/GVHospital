@@ -1,0 +1,24 @@
+{% extends "app/home.html" %}
+
+{% load static %}
+
+<title>{% block title %}Success{% endblock %}</title>
+
+{% block content %}
+<div class = "container">
+<div class = "spacer">
+<h2>Edit Entry</h2><br>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ gpi.as_p }} <br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+    <button type="submit" class="btn btn-outline-primary">Update</button>
+    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+    <a href="{% url 'patient' %}" class="btn btn-outline-primary">Cancel</a>
+</form>
+
+<a href="{% url 'home' %}" class="btn btn-outline-primary">Home</a>
+</div>
+</div>
+{% endblock %}

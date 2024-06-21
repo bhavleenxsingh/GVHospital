@@ -1,0 +1,42 @@
+
+{% extends "app/home.html" %}
+
+{% load static %}
+
+<title>{% block title %}Delete Success{% endblock %}</title>
+
+{% block content %}
+<div class = "container">
+<div class = "spacer">
+<h3>Are you sure you want to delete this entry?</h3>
+<h5>(This cannot be <strong>UNDONE</strong> )</h5>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Mobile</th>
+        <th>Department</th>
+        <th>Gender</th>
+    </tr>
+    <tr>
+        <td>{{ delc.FirstName }}</td>
+        <td>{{ delc.FirstName }}</td>
+        <td>{{ delc.LastName }}</td>
+        <td>{{ delc.Mobile }}</td>
+        <td>{{ delc.Department }}</td>
+        <td>{{ delc.Gender }}</td>
+        <td>{% if delc.id %}
+                <a href="{% url 'delpat' delc.id %}">Delete</a>
+            {% else %}
+                No ID
+            {% endif %}</td>
+    </tr>
+</table>
+<a href="{% url 'patient' %}" class="btn btn-outline-primary">< Back to Patients </a>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; 
+<a href="{% url 'home' %}" class="btn btn-outline-primary">Home ></a>
+</div>
+</div>
+{% endblock %}

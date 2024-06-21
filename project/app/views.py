@@ -148,3 +148,26 @@ def dowhat(request):
 def logout(request):
     auth_logout(request)
     return render(request, "app/logout.html")
+
+def edpat(request, id):
+    getid = patientinfo.objects.get(id=id)
+    gpi = patientf(instance = getid)
+    if request.method == "POST":
+        gpi = patientf(request.POST, instance = getid)
+        if gpi.is_valid:
+            gpi.save()
+            return redirect("success")
+        else:
+            return redirect("invalidf")
+    else :
+        return render(request, "app/edit.html", {"gpi": gpi})
+    
+def delpat(request,id):
+    deletep = patientinfo.objects.get(id = id)
+    deletep.delete()
+    return redirect('patient')
+
+def cdel(request, id):
+    patdelc = patientinfo.objects.get(id=id)
+    delc = patientf(instance = patdelc)
+    return render(request, "app/cdel.html", {"delc": delc, "patdelc": patdelc})

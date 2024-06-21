@@ -26,6 +26,8 @@
         <td>{{ i.Mobile }}</td>
         <td>{{ i.Department }}</td>
         <td>{{ i.Gender }}</td>
+        <td><a href="{% url 'edpat' i.id  %}" class="btn btn-outline-primary">Edit</a></td>
+        <td><a href="{% url 'cdel' i.id %}" class="btn btn-outline-primary">Delete</a></td>
     </tr>
 {% endfor %}
 </table>

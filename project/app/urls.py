@@ -18,4 +18,7 @@ urlpatterns = [
     path('success', views.success, name = "success"),
     path('dowhat', views.dowhat, name = "dowhat"),
     path('logout', views.logout, name = "logout"),
+    path('edpat/<int:id>/', views.edpat, name = "edpat"),
+    path('delpat/<int:id>/', views.delpat, name = "delpat"),
+    path('cdel/<int:id>/', views.cdel, name = "cdel"),
 ]
